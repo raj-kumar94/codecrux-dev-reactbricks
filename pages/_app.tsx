@@ -27,6 +27,7 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
 
   return (
     <ReactBricks {...reactBricksConfig}>
+      <link rel="icon" type="image/png" href="favicon.ico" />
       <Component {...pageProps} />
     </ReactBricks>
   )
