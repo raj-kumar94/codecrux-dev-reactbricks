@@ -1,18 +1,18 @@
 import React, { useState } from 'react'
 import { Text, RichText, types } from 'react-bricks/frontend'
 
-function TitleAndDescription({ padding, title_font_size, alignment }) {
+function TitleAndDescription2({ padding, title_font_size, alignment }) {
     return (
         <div className={`max-w-6xl mx-auto px-6 py-4`}>
             <div>
                 <Text
                     renderBlock={(props) => (
                         title_font_size === 'h1' ? 
-                        <h1 className={`text-3xl sm:text-4xl font-black text-gray-900 dark:text-white leading-tight mb-3 ${alignment}`}>
+                        <h3 className={`text-3xl sm:text-4xl text-gray-900 dark:text-white leading-tight mb-3 ${alignment}`} style={{fontWeight: 600}}>
                             {props.children}
-                        </h1>
+                        </h3>
                         :
-                        <h3 className={`text-3xl sm:text-2xl font-black text-gray-900 dark:text-white leading-tight mb-3 ${alignment}`}>
+                        <h3 className={`text-3xl sm:text-2xl text-gray-900 dark:text-white leading-tight mb-3 ${alignment}`} style={{fontWeight: 600}}>
                             {props.children}
                         </h3>
                     )}
@@ -45,9 +45,9 @@ function TitleAndDescription({ padding, title_font_size, alignment }) {
     )
 }
 
-TitleAndDescription.schema = {
-    name: 'title-description',
-    label: 'Custom Title-description',
+TitleAndDescription2.schema = {
+    name: 'title-description-2',
+    label: 'Custom Title-description 2',
     getDefaultProps: () => ({
         padding: 'big',
         title: 'This is a Contact us form',
@@ -83,4 +83,4 @@ TitleAndDescription.schema = {
     ],
 }
 
-export default TitleAndDescription;
+export default TitleAndDescription2;

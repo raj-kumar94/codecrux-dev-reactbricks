@@ -18,3 +18,10 @@ Then run
 ```bash
 npm run dev
 ```
+
+## Deploying to production
+
+```
+npm run build
+vercel --prod
+```

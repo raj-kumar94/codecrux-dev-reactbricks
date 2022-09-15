@@ -1,11 +1,14 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { ReactBricks } from 'react-bricks/frontend'
 import type { AppProps } from 'next/app'
+import { useRouter } from 'next/router';
 import config from '../react-bricks/config'
+import { startCrispChatbox } from '../utils/chat';
 
 import '../css/styles.css'
 
 const MyApp = ({ Component, pageProps }: AppProps) => {
+const router = useRouter()
   // Color Mode Management
   const savedColorMode =
     typeof window === 'undefined' ? '' : localStorage.getItem('color-mode')
@@ -24,6 +27,10 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
       colorMode === 'dark' ? 'bg-gray-900' : 'bg-white'
     }`,
   }
+
+  useEffect(() => {
+	startCrispChatbox();
+  }, [router.pathname])
 
   return (
     <ReactBricks {...reactBricksConfig}>
