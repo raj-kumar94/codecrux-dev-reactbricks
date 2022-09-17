@@ -7,10 +7,12 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "postbuild": "next-sitemap",
     "start": "next start"
   },
   "dependencies": {
     "next": "^12.2.2",
+    "next-sitemap": "^3.1.22",
     "prism-theme-night-owl": "^1.4.0",
     "prismjs": "^1.28.0",
     "react": "^18.2.0",

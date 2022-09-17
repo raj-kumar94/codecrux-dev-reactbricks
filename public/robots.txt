@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://codecrux.dev
+
+# Sitemaps
+Sitemap: https://codecrux.dev/sitemap.xml
