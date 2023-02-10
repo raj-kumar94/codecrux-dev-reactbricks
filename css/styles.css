@@ -5,3 +5,8 @@
 .text-red-500 {
     color: red;
 }
+
+.max-w-6xl.mx-auto.px-6.py-4 p {
+    padding-top: 6px;
+    padding-bottom: 6px;
+}

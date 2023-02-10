@@ -4,4 +4,13 @@ module.exports = {
     defaultLocale: 'en',
     localeDetection: false,
   },
+  async redirects() {
+    return [
+      {
+        source: '/product-customiser-react',
+        destination: '/',
+        permanent: true,
+      },
+    ]
+  },
 }
